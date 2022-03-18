@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worry App</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/@oseq/auma/dist/auma-decision-tree.js"></script>
+</head>
+<body>
+    <script>
+        auma({
+            id: "demo-decision-tree",
+            theme: {
+                logoUrl: "./images/auma.png",
+                buttonYesBgColor: "#6699cc",
+                buttonYesFgColor: "#ffffff",
+                buttonNoBgColor: "#77dd77",
+                buttonNoFgColor: "#ffffff",
+            },
+            welcome: {
+                audioUrl: "./audio/intro.wav",
+            },
+            questions: [{
+                id: "1",
+                audioUrl: "./audio/1.wav",
+                imageUrl: "./images/1.png",
+                onYes: "question:3",
+                onNo: "question:2",
+            },
+            {
+                id: "2",
+                audioUrl: "./audio/1.wav",
+                imageUrl: "./images/2.png",
+                onYes: "question:8",
+                onNo: "question:3",
+            }]
+        })
+    </script>
+</body>
+</html>
